@@ -1,2 +1,2 @@
-class Passwords < ActiveRecord::Base
+class Password < ActiveRecord::Base
 end
