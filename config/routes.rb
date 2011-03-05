@@ -1,6 +1,11 @@
 Ssap::Application.routes.draw do
-  devise_for :users
+  devise_for :users,:except => [:sign_up]
+
   root :to => "passwords#index"
+
+  namespace :user do
+    root :to => "passwords#index"
+  end
 
   resources :passwords
 
