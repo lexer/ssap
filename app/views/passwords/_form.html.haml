@@ -1,0 +1,19 @@
+= form_for password, :html => { :id => "password-form"} do |f|
+  .label
+    = f.label :link
+  .field
+    = f.text_field :link
+  .label
+    = f.label :name
+  .field
+    = f.text_field :name
+  .label
+    = f.label :login
+  .field
+    = f.text_field :login
+  .label
+    = f.label :password
+  .field
+    = f.text_field :password
+
+  = f.submit
