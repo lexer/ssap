@@ -8,3 +8,5 @@
 
 
 #Password.create :name => "gmail", :link => "http://gmail.com", :password => "sdfgsdfgsdfg!", :login => "lexer.box@gmail.com"
+
+User.create :email => "alexey.v.zaharov@gmail.com", :password => "123456"
