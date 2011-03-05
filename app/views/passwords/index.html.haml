@@ -1,7 +1,23 @@
 %h1
   Passwords
-- @passwords.each do |item|
-  =item.link
-  =item.name
-  =item.login
-  =item.password
+%table.passwords
+  %thead
+    %tr
+      %th
+        Link
+      %th
+        Name
+      %th
+        Login
+      %th
+        Password
+  - @passwords.each do |item|
+    %tr.item
+      %td
+        =item.link
+      %td
+        =item.name
+      %td
+        =item.login
+      %td
+        =item.password
