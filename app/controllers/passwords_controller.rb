@@ -17,4 +17,18 @@ class PasswordsController < ApplicationController
       render :action => :new
     end
   end
+
+  def edit
+    @password = Password.find params[:id]
+  end
+
+  def update
+    @password = Password.find params[:id]
+
+    if @password.update_attributes(params[:password])
+      redirect_to :action=>:index, :notice => "Password succefully updated"
+    else
+      render :action => :new
+    end
+  end
 end

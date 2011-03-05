@@ -11,6 +11,7 @@
         Login
       %th
         Password
+      %th
   - @passwords.each do |item|
     %tr.item
       %td
@@ -21,3 +22,5 @@
         =item.login
       %td
         =item.password
+      %td
+        = link_to "Edit", edit_password_path(item)
