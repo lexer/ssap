@@ -1,5 +1,8 @@
 Ssap::Application.routes.draw do
-  devise_for :users,:except => [:sign_up]
+
+  match "/users/sign_up" => redirect("/users/sign_in")
+
+  devise_for :users
 
   root :to => "passwords#index"
 
@@ -8,6 +11,8 @@ Ssap::Application.routes.draw do
   end
 
   resources :passwords
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

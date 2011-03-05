@@ -9,5 +9,8 @@
     = javascript_include_tag :defaults
     = csrf_meta_tag
   %body
-    = link_to "Add new password", new_password_path
+    - if user_signed_in?
+      .status-bar
+        =link_to "Account", edit_user_registration_path
+        =link_to "Logout", destroy_user_session_path
     = yield
