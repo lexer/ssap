@@ -31,4 +31,11 @@ class PasswordsController < ApplicationController
       render :action => :new
     end
   end
+
+  def destroy
+    @password = Password.find params[:id]
+    @password.destroy
+
+    redirect_to :action => :index
+  end
 end

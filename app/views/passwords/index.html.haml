@@ -12,6 +12,7 @@
       %th
         Password
       %th
+      %th
   - @passwords.each do |item|
     %tr.item
       %td
@@ -24,3 +25,5 @@
         =item.password
       %td
         = link_to "Edit", edit_password_path(item)
+      %td
+        = link_to "Delete", password_path(item), :method => :delete, :confirm => "Are you sure?"
