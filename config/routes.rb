@@ -1,17 +1,24 @@
 Ssap::Application.routes.draw do
+<<<<<<< HEAD
 
   match "/" => "devise/sessions#new"
 
 
   devise_for :users
 
+=======
+  devise_for :users
+  root :to => "passwords#index"
+
+  resources :passwords
+>>>>>>> 21e8af0141252f08ddac2d9406d6b9471c991e84
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
-     ``
+
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
