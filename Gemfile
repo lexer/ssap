@@ -9,6 +9,8 @@ gem 'haml'
 gem 'compass'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'devise'
+gem "hpricot"
+gem "ruby_parser"
 
 
 # Use unicorn as the web server
